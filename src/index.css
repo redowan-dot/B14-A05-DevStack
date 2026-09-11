@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 
+   * Central Brand Gradient Theme (Orange → Pink → Violet)
+   * Changing this single variable re-themes all brand accents across the application.
+   */
+  --brand-gradient: linear-gradient(135deg, #FF5E3A 0%, #E12D86 50%, #7928CA 100%);
+  --brand-gradient-hover: linear-gradient(135deg, #FF704D 0%, #EB3D93 50%, #8837DC 100%);
+}
+
+/* Reusable brand gradient utility classes */
+.bg-brand-gradient {
+  background: var(--brand-gradient);
+}
+
+.text-brand-gradient {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom scrollbar and smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #FAFCFF;
+  color: #0F172A;
+}
+
+/* Toast container custom styling enhancements */
+.Toastify__toast {
+  border-radius: 12px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+}
